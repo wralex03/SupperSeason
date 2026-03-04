@@ -1,0 +1,524 @@
+# ================= { FISH FORMAT } =================
+# <id>:
+#   display: <name>                               # fish's display name, use & as color code
+#   season: <season>                             # included: spring, summer, autumn, winter or none for all season
+#   rarity: <rarity>                                  # see in rarity.yml
+#   length:                                              # fish's length options (cm)
+#     min: <amount>                               # smallest fish can be found
+#     max: <amount>                              # biggest fish can be found
+#     enable: <true/false>                        # will caught item display length
+#   icon:                                                # icon options:
+#     id: <material>                                 # can be found in spigot wiki, choose suitable material each version
+#     data: <value>                                 # custom model data (only work for 1.14+)
+#     description:                                   # same as lore
+#     - <desc 1>
+#     ....
+#   trigger:                                             # mechanic on interact with fish
+#     caught:                                           # run commands on caught
+#     - <command 1>
+#     ....
+#     eat:                                                 # run commands on eat
+#     - <command 2>
+#     ....
+# ===================================================
+# icon-id can be COD, SALMON, PUFFERFISH, TROPICAL_FISH (SHELL for 1.13+).
+#
+# always have a ' ' in end of trigger line
+# there was some special key can use
+# %p - Player who eat, caught
+# %rp - Random a online player 
+# %ird# - Random a integer number from 1 - #
+# %drd# - Random a real number from 1 - #
+#
+
+Fish:
+  shrimp:
+    display: 'Shrimp'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 3
+      max: 8
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  anchovy: 
+    display: 'Anchovy'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 7
+      max: 13
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  croaker:
+    display: 'Croaker'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 12
+      max: 15
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  crab:  
+    display: 'Crab'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 10
+      max: 15
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  mackerel:   
+    display: 'Mackerel'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 15
+      max: 30
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  herring:
+    display: 'Herring'
+    season: 'none'
+    rarity: 'common'
+    length:
+      min: 20
+      max: 30
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  pie:
+    display: 'Pie'
+    season: 'none'
+    rarity: 'trash'
+    length:
+      min: 3.14
+      max: 3.14
+      enable: true
+    icon:
+      id: 'PUMPKIN_PIE'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  bread:
+    display: 'Bread'
+    season: 'none'
+    rarity: 'trash'
+    length:
+      min: 10
+      max: 10
+      enable: true
+    icon:
+      id: 'BREAD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+
+  fishing_rod:
+    display: 'Fishing Rod'
+    season: 'none'
+    rarity: 'trash'
+    length:
+      min: 10
+      max: 10
+      enable: false
+    icon:
+      id: 'FISHING_ROD'
+      data: 0
+      description: 
+      - '&7- Someone dropped it...'
+    trigger:
+      caught: []
+      eat: []
+    
+  book:
+    display: 'Story Book'
+    season: 'none'
+    rarity: 'trash'
+    length:
+      min: 25
+      max: 25
+      enable: false
+    icon:
+      id: 'BOOK'
+      data: 0
+      description: 
+      - '&7- An old story...'
+    trigger:
+      caught: []
+      eat: []
+    
+  jellyfish:
+    display: 'Jelly Fish'
+    season: 'none'
+    rarity: 'rare'
+    length:
+      min: 20
+      max: 40
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+
+  squid:
+    display: 'Squid'
+    season: 'none'
+    rarity: 'rare'
+    length:
+      min: 30
+      max: 50
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  flatfish:
+    display: 'FLatFish'
+    season: 'none'
+    rarity: 'rare'
+    length:
+      min: 40
+      max: 75
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  seabream:
+    display: 'Sea Bream'
+    season: 'none'
+    rarity: 'rare'
+    length:
+      min: 50
+      max: 70
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  seabass:
+    display: 'Sea Bass'
+    season: 'none'
+    rarity: 'rare'
+    length:
+      min: 60
+      max: 100
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  clownfish:
+    display: 'Clown Fish'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 10
+      max: 18
+      enable: true
+    icon:
+      id: 'TROPICAL_FISH'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  pufferfish:
+    display: 'Pufferfish'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 20
+      max: 30
+      enable: true
+    icon:
+      id: 'PUFFERFISH'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  seaturtle:
+    display: 'Sea Turtle'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 90
+      max: 130
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  salmon:
+    display: 'Salmon'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 100
+      max: 130
+      enable: true
+    icon:
+      id: 'SALMON'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  blackdrum:
+    display: 'Black Drum'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 100
+      max: 180
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  tuna:
+    display: 'Tuna'
+    season: 'none'
+    rarity: 'epic'
+    length:
+      min: 130
+      max: 180
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  blueshark:
+    display: 'Blue Shark'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 160
+      max: 240
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  pygmywhale:
+    display: 'Pygmy Whale'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 600
+      max: 750
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+
+  killerwhale:
+    display: 'Killer Whale'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 500
+      max: 750
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  giantfish:
+    display: 'Giant Fish'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 800
+      max: 1000
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  firefish:
+    display: 'Fire Fish'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 30
+      max: 50
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  giantoctopus:  
+    display: 'Giant Octopus'
+    season: 'none'
+    rarity: 'legendary'
+    length:
+      min: 1300
+      max: 1500
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: []
+    trigger:
+      caught: []
+      eat: []
+    
+  megalodon:
+    display: 'Megalodon'
+    season: 'none'
+    rarity: 'mythic'
+    length:
+      min: 1700
+      max: 1900
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: 
+      - '&4- What is that??'
+    trigger:
+      caught: []
+      eat: 
+      - 'effect %p minecraft:STRENGTH 120 1 '
+    
+  enderfish:
+    display: 'Ender Fish'
+    season: 'none'
+    rarity: 'mythic'
+    length:
+      min: 40
+      max: 60
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: 
+      - '&5- Weee.... wee....'
+      - '&5- Please dont eat this.'
+    trigger:
+      caught: 
+      - 'give %p minecraft:ENDER_PEARL %ird16 '
+      eat: 
+      - 'tp %p %ird1000 %ird64 %ird1000 '
+    
+  goldenfish:
+    display: 'Golden Fish'
+    season: 'none'
+    rarity: 'mythic'
+    length:
+      min: 40
+      max: 60
+      enable: true
+    icon:
+      id: 'COD'
+      data: 0
+      description: 
+      - '&6- Midas has touched it.'
+    trigger:
+      caught:
+      - 'eco give %p %ird500000 ' 
+      eat: 
+      - 'effect %p minecraft:UNLUCK 120 1 '

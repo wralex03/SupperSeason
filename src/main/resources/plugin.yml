@@ -1,0 +1,19 @@
+name: SupperSeason
+version: 1.1.4+
+author: ZenDev
+main: org.zendev.SupperSeason.SupperSeason
+description: four season like real life
+depend: [PlaceholderAPI, Vault]
+
+api-version: 1.14
+
+commands:
+  season:
+    description: show current season
+    aliases: [supperseason, ss]
+  fishshop:
+    description: open fish shop
+    aliases: [fs, fish]
+  fishcontest:
+    description: fishcontest commands
+    aliases: [fc, fict]

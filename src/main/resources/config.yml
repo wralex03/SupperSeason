@@ -1,0 +1,223 @@
+logger: true
+# Enable to show information about SupperSeason
+keep_inventory_system: true           
+# Enable keep inventory system, day: keep, night: non keep
+tired: true
+# True: player gained lot of debuff at night 
+day-cycle: 24000                            # ticks; 1 second = 20 ticks
+# How long a plugin-day last (ticks) 
+day-parts: 20
+# How many part a day be divided? Higher value for smoother bossbar. I should be number that cycle / part = integer
+always-day: false
+# Day never gone, peaceful...
+always-night: false
+# Night never gone, hard mode!!!
+
+# List of worlds that season effect not work.
+Blacklist-World:         
+- 'nether'
+- 'theend'
+
+# Some message, title
+Messages:
+  season_command:
+    # Keep this structure, only edit text
+    help:
+    - '&2Supper Season &7- All commands'
+    - '&7version - <placeholder_version>'
+    - ''
+    - '&f/season: &ashow current season, day'
+    - '&f/season help: &ashow this'
+    - '&f/season enchant &e<&fenchantments&e>: &aenchant item in your hand'
+    - ''
+    - '&f/fishshop: &aOpen fish market to sell your fish'
+    - '&f/fishshop op: &aCatch a random fish'
+    - ''
+    - '&f/fishcontest: &aShow contest infomation'
+    - '&f/fishcontest start: &aForce to start a contest'
+    - '&f/fishcontest end: &aForce to stop a contest'
+    - ''
+    - '&e<>:&7 required'
+    display:
+    - '&2------------------------------'
+    - '&fSeason: <season>'
+    - '&fDate: <date>'
+    - '&2------------------------------'
+  only_player: '&cOnly player can do that!'
+  # message on console use command
+  no_permission: '&cYou do not have permission to do that!'
+  # message on player use command without permission
+  reload: '&aReloaded SupperSeason v<version>'
+  # on new day come
+  new-day: '&aNew day has started!'
+  # on night come
+  night: 
+  - '&4The night has came! &c(non keep!)'
+  - '&aFind a place to hide'
+  # on use /season enchant ...
+  add_enchant: '&aSuccesfully add &9&l<enc> &ato item'
+  hand_something: '&cHand Something!'
+  # on tired
+  tired:
+  - '&cYou looked tired!'
+  - '&aShould take a ress'
+  # try to fishing in season
+  cannot_fishing: '&cYou can not fishing in this season!'
+ 
+#color can be: YELLOW, PURPLE, BLUE, GREEN, PINK, RED, WHITE
+#style can be: SEGMENTED_10, SEGMENTED_12, SEGMENTED_6, SEGMENTED_20, SOLID
+Bossbar:
+  # does bossbar display?
+  enable: true
+  # bossbar color
+  color:
+    day: 'YELLOW'
+    night: 'PURPLE'
+  # bossbar style
+  style: 'SEGMENTED_20'
+
+# use <player> for @a
+# Console run commands on ...
+Commands:
+  new-day: 
+  - 'say hi'
+  - 'give <player> DIAMOND 4'
+  night:
+  - 'say beware!'
+  - 'give <player> TORCH 4'
+  spring-come:
+  - 'say spring!'
+  summer-come:
+  - 'say summer!'
+  autumn-come:
+  - 'say autumn!'
+  winter-come:
+  - 'say winter!'
+ 
+Season:
+  #from January to March
+  spring: 
+    name: '&dSpring'
+    effect:
+    - 'regenaration'
+    - 'double_crops'
+    - 'double_ores'
+    - 'bright'
+    fishing: true
+  #from April to June
+  summer:
+    name: '&6Summer'
+    effect:
+    - 'sweating'
+    - 'hot_weather'
+    - 'double_crops'
+    - 'sand_burn'
+    fishing: true
+  #from July to September
+  autumn:
+    name: '&3Autumn'
+    effect:
+    - 'wind_boost'
+    - 'double_ores'
+    - 'cool_water'
+    - 'slow_growing'
+    fishing: true
+  #from October to December
+  winter: 
+    name: '&bWinter'
+    effect:
+    - 'cool_water'
+    - 'icy'
+    - 'disable_seeds'
+    - 'dead_plant'
+    - 'slow_growing'
+    - 'freezing'
+    fishing: false
+
+# Message on caught fish.
+Fish-caught: 
+  broadcast: true
+  message: '&e&lFISHING | &a<player> &fhas caught &r<fish> (<length>)'
+
+# for fish genarator...
+Fish-format:
+  name: '<color><display>'
+  length-line: '&eLength:'
+  caught-line: '&7Caught by <player>'
+  # must have <length> <caught>
+  lore: 
+  - '<length>'
+  - '<caught>'
+  - ''
+
+# Item in /season shop
+Fish-shop:
+  close-icon: 
+    id: 'BARRIER'
+    name: '&cClick to close'
+  sell-icon: 
+    id: 'EMERALD'
+    name: '&aClick to sell &e(<amount>$)'
+  gui-name: '&2&lFish Shop'
+  sold: '&aGained $<amount>'
+ 
+# About fishing contest
+Fish-contest:
+  display: '&e&lFISHING CONTEST'
+  # which display
+  player-required: 5
+  not-enough-player: '&cNot enought player to hold a contest. At least (<amount>)!'
+  not-start: '&cFishing contest has not started yet!'
+  already-start: '&cFishing contest has already started!'
+  status:
+    true: '&aIn-compete'
+    false: '&cNot now!'
+  info-message:
+  - '&2------------------------------'
+  - '&b&lFISHING CONTEST:'
+  - '&fStatus: <status>'
+  - '&fNext contest: &3<time> day(s)'
+  - '&2------------------------------'
+  your-rank: '&7Your rank: &e<rank>'
+  start-message:
+  - '&2------------------------------'
+  - '&bFishing contest started!'
+  - '&fIt last: &b<time>s.'
+  - '&fCatch the longest fish for 1st!'
+  - '&fLet us fishing for &elots of prize!'
+  - '&2------------------------------'
+  end-message:
+  - '&2------------------------------'
+  - '&cTimed up! Fishing contest is over!'
+  - '&a1st - &f<1st_player>'
+  - '&e2nd - &f<2nd_player>'
+  - '&63rd - &f<3rd_player>'
+  - '&fThe next contest come in: &3<time> day(s).'
+  - '&2------------------------------'
+  # message send to player
+  # at least <player-required> to held a contest
+  rare-required: 3
+  # base on money per length -> rare. in default, caught trash and common won't enable to compete the contest
+  hold-on:
+  - 10
+  - 20
+  - 30
+  # contest auto started on <hold-on> day in mouth
+  duration: 48000
+  # contest last <duration> tick(s)
+  bar:
+    enable: true
+    color: 'BLUE'
+    style: 'SOLID'
+    parts: 20                      # how many bar divived to
+  # bar options
+  # reward options
+  rewards:
+    first:            # 1st
+    - 'give <player> DIAMOND 16'
+    second:       # 2nd
+    - 'give <player> DIAMOND 8'
+    third:            # 3rd
+    - 'give <player> DIAMOND 4'
+    other:            # join contest
+    - 'give <player> DIRT 1'

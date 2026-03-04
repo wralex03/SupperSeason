@@ -1,0 +1,25 @@
+Rarity:
+  default: 'trash'
+  trash:
+    price-per-cm: 0
+    color: '&8'
+  common:
+    price-per-cm: 2
+    color: '&a'
+    chance: 50
+  rare:
+    price-per-cm: 5
+    color: '&9'
+    chance: 30
+  epic:
+    price-per-cm: 8
+    color: '&5'
+    chance: 20
+  legendary:
+    price-per-cm: 15
+    color: '&6'
+    chance: 10
+  mythic:
+    price-per-cm: 45
+    color: '&4'
+    chance: 5

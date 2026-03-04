@@ -1,0 +1,131 @@
+# in day, player has chance to take a regenaration effect
+regenaration:
+  chance: 50
+  period: 20
+  tier: 1
+
+# not wearing leather cloths in location has light > 13 make player burn  
+hot_weather:
+  duration: 80
+  message: '&6Burning!!'
+  
+# wearing full cloths make player weakness
+sweating:
+  duration: 20
+  tier: 0
+  
+# walk in sand has chance to deal damage player
+sand_burn:
+  chance: 20
+  damage: 0.2
+  
+# not wearing leather cloths in location has light < 13 make player slow
+freezing:
+  message: '&9Freezing!!'
+  duration: 80
+  tier: 1
+  
+# walk in water make player slowdown
+cool_water:
+  duration: 40
+  tier: 2
+  
+# in day, player has chance to take speed boost
+wind_boost:
+  chance: 50
+  period: 20
+  tier: 1
+
+# can't use water (bucket)
+icy:
+  message: '&cThe water was freeze!'
+  
+# make player extremely blind
+darkness:
+  message: '&5&lEverything was in the darkness!'
+  chance: 80
+  period: 200
+  
+# make player enable to see in dark
+bright:
+  message: '&eFeel a nice day!'
+  chance: 80
+  period: 200
+  
+# make plant slow growing
+slow_growing:
+  chance: 
+    spring: 10
+    summer: 20
+    autumn: 30
+    winter: 80
+
+#Make sure these crops, seeds, ores are avaialbe on your minecraft version  
+
+#All Crops: CROPS, BEETROOT_BLOCK, CARROT, POTATO, MELON, PUMPKIN,
+#BAMBOO, COCOA_BEANS, SUGAR_CANES, SWEET_BERRIES, CACTUS, NETHER_WARTS
+
+#All Ores: COAL_ORE, IRON_ORE, GOLD_ORE, LAPIS_ORE, REDSTONE_ORE, EMERALD_ORE,
+#DIAMOND_ORE, QUARTZ_ORE
+
+# make plant dead
+# special: TREE
+dead_plant:
+  chance:
+    spring: 0
+    summer: 10
+    autumn: 40
+    winter: 100
+  type:
+    spring: []
+    summer: 
+    - 'CROPS'
+    autumn:
+    - 'CROPS'
+    - 'POTATO'
+    - 'CARROT'
+    winter:
+    - 'CROPS'
+    - 'PUMPKIN'
+    - 'POTATO'
+    - 'CARROT'
+    - 'MELON'
+    - 'SUGAR_CANES'
+
+# chance to double crops
+double_crops:
+  chance: 
+    spring: 100
+    summer: 80
+    autumn: 60
+    winter: 10
+  
+# disable to grow some crops
+disable_seeds:
+  message: '&cCan not plant it in <season>&c!'
+  type:
+    spring: []
+    summer: 
+    - 'SWEET_BERRIES'
+    - 'BAMBOO'
+    autumn: []
+    winter: 
+    - 'CACTUS'
+    - 'SUGAR_CANES'
+
+# chance to double ores
+double_ores:
+  chance: 40
+  type:
+    spring: 
+    - 'GOLD_ORE'
+    - 'QUARTZ_ORE'
+    summer: 
+    - 'LAPIS_ORE'
+    - 'REDSTONE_ORE'
+    autumn: 
+    - 'COAL_ORE'
+    - 'IRON_ORE'
+    winter: 
+    - 'DIAMOND_ORE'
+    - 'EMERALD_ORE'
