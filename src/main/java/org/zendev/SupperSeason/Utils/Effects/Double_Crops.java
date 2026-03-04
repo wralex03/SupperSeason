@@ -3,13 +3,12 @@
 /*    */ import org.bukkit.Bukkit;
 /*    */ import org.bukkit.Material;
 /*    */ import org.bukkit.block.Block;
+         import org.bukkit.block.data.Ageable;
 /*    */ import org.bukkit.entity.Player;
 /*    */ import org.bukkit.event.EventHandler;
 /*    */ import org.bukkit.event.Listener;
 /*    */ import org.bukkit.event.block.BlockBreakEvent;
 /*    */ import org.bukkit.inventory.ItemStack;
-/*    */ import org.bukkit.material.Crops;
-/*    */ import org.bukkit.material.MaterialData;
 /*    */ import org.zendev.SupperSeason.Files.File_effect;
 /*    */ import org.zendev.SupperSeason.Files.File_time;
 /*    */ import org.zendev.SupperSeason.Utils.Season;
@@ -31,20 +30,18 @@
 /* 31 */               Player p = e.getPlayer();
 /* 32 */               Block bl = e.getBlock();
 /* 33 */               String type = bl.getType().toString();
-/* 34 */               MaterialData data = bl.getState().getData();
 /*    */               
-/* 36 */               if (type.equals("MELON_BLOCK") || type.equals("HOPPER") || 
-/* 37 */                 type.equals("SUGAR_CANE_BLOCK") || type.equals("PUMPKIN") || type.equals("BAMBOO")) {
+/* 36 */               if (type.equals("MELON") || type.equals("HOPPER") ||
+/* 37 */                 type.equals("SUGAR_CANE") || type.equals("PUMPKIN") || type.equals("BAMBOO")) {
 /*    */                 
 /* 39 */                 boolean isPlaced = bl.hasMetadata("PLACED");
 /* 40 */                 if (isPlaced) {
 /*    */                   return;
 /*    */                 }
 /*    */               } else {
-/* 44 */                 Crops crop = new Crops();
-/* 45 */                 crop.setData(data.getData());
-/* 46 */                 if (crop.getData() != 7 && crop.getData() != 3)
-/*    */                   return; 
+/* 44 */                 if (!(bl.getBlockData() instanceof Ageable)) return;
+                         Ageable ageable = (Ageable) bl.getBlockData();
+                         if (ageable.getAge() < ageable.getMaximumAge()) return;
 /*    */               } 
 /* 49 */               if (Utils.roll(chance) && Utils.ActiveWorld().contains(p.getWorld()))
 /*    */               {

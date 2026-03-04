@@ -5,7 +5,7 @@ main: org.zendev.SupperSeason.SupperSeason
 description: four season like real life
 depend: [PlaceholderAPI, Vault]
 
-api-version: 1.14
+api-version: 1.21
 
 commands:
   season:

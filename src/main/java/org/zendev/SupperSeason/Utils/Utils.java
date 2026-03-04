@@ -173,8 +173,8 @@
 /* 173 */     if (item.getType() == Material.AIR) return 0; 
 /* 174 */     if (item.getItemMeta() == null) return 0; 
 /* 175 */     ItemMeta meta = item.getItemMeta();
-/* 176 */     if (!meta.hasEnchant(Enchantment.LOOT_BONUS_BLOCKS)) return 0; 
-/* 177 */     return meta.getEnchantLevel(Enchantment.LOOT_BONUS_BLOCKS);
+/* 176 */     if (!meta.hasEnchant(Enchantment.FORTUNE)) return 0;
+/* 177 */     return meta.getEnchantLevel(Enchantment.FORTUNE);
 /*     */   }
 /*     */ 
 /*     */   
@@ -311,24 +311,22 @@
 /*     */               continue;  Sand_Burn.RegEvent(ss);case 1741803213: if (!str1.equals("darkness"))
 /*     */               continue;  Darkness.RegRunner(ss);case 1777723015: if (!str1.equals("regenaration"))
 /*     */               continue;  Regenaration.RegRunner(ss);case 1832834562: if (!str1.equals("hot_weather"))
-/* 314 */               continue;  Hot_Weather.RegRunner(ss); }  }  i++; }  } public static ItemStack createItem(Material type, int amount, int data) { ItemStack item = new ItemStack(type, amount, (short)data);
-/* 315 */     return item; }
+/* 314 */               continue;  Hot_Weather.RegRunner(ss); }  }  i++; }  }
 /*     */ 
 /*     */ 
 /*     */ 
 /*     */   
-/*     */   public static ItemStack createItem(String type, int amount, int data) {
-/* 321 */     ItemStack item = new ItemStack(Material.getMaterial(type), amount, (short)data);
-/* 322 */     return item;
+/*     */   public static ItemStack createItem(Material type, int amount, int data) {
+                return new ItemStack(type, amount);
 /*     */   }
+
+            public static ItemStack createItem(String type, int amount, int data) {
+                return new ItemStack(Material.getMaterial(type), amount);
+            }
 /*     */ 
 /*     */   
 /*     */   public static String GetTitle(InventoryEvent event) {
-/* 327 */     String title = "N/A";
-/*     */     
-/* 329 */     title = event.getView().getTitle();
-/*     */     
-/* 331 */     return title;
+/* 327 */     return event.getView().getTitle();
 /*     */   }
 /*     */ }
 

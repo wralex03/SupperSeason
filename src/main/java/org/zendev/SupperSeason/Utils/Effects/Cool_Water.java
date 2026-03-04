@@ -24,8 +24,8 @@
 /* 24 */               for (Player p : (Iterable<Player>)Bukkit.getOnlinePlayers()) {
 /*    */                 
 /* 26 */                 if (p.getLocation().getBlock().getType().toString().contains("WATER") && 
-/* 27 */                   !p.hasPotionEffect(PotionEffectType.SLOW) && Utils.ActiveWorld().contains(p.getWorld()))
-/* 28 */                   p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, duration, tier)); 
+/* 27 */                   !p.hasPotionEffect(PotionEffectType.SLOWNESS) && Utils.ActiveWorld().contains(p.getWorld()))
+/* 28 */                   p.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, duration, tier));
 /*    */               }  
 /*    */           }
 /* 31 */         },  20L, 0L);

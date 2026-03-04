@@ -108,9 +108,9 @@
 /* 108 */         }  if (this.count == this.time && !p.isSleeping()) {
 /*     */           
 /* 110 */           p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 9));
-/* 111 */           p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 2));
+/* 111 */           p.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 100, 2));
 /* 112 */           p.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 100, 4));
-/* 113 */           p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 100, 4));
+/* 113 */           p.addPotionEffect(new PotionEffect(PotionEffectType.MINING_FATIGUE, 100, 4));
 /*     */         } 
 /*     */       } 
 /*     */     } 

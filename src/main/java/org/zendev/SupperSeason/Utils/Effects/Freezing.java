@@ -28,8 +28,8 @@
 /* 28 */                 if (!Utils.nearFire(p) && !Utils.wearCloth(p) && !Warm.hasWarm(p) && Utils.ActiveWorld().contains(p.getWorld())) {
 /*    */                   
 /* 30 */                   Utils.sendTitle(p, message, "");
-/* 31 */                   if (!p.hasPotionEffect(PotionEffectType.SLOW))
-/* 32 */                     p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, duration, tier)); 
+/* 31 */                   if (!p.hasPotionEffect(PotionEffectType.SLOWNESS))
+/* 32 */                     p.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, duration, tier));
 /*    */                 } 
 /*    */               }  
 /*    */           }

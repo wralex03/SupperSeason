@@ -46,7 +46,7 @@
 /*     */ 
 /*     */   
 /*     */   public static void loadDate() {
-/*  49 */     Date = timConfig.getString("Date.format").replace("<dd>", Day).replace("<mm>", Month).replace("<yy>", Year);
+/*  49 */     Date = timConfig.getString("Date.format").replace("<dd>", String.valueOf(Day)).replace("<mm>", String.valueOf(Month)).replace("<yy>", String.valueOf(Year));
 /*     */   }
 /*     */ 
 /*     */   
@@ -95,7 +95,7 @@
 /*     */       case SPRING:
 /*  96 */         return "spring";
 /*  97 */       case SUMMER: return "summer";
-/*  98 */       case null: return "autumn";
+/*  98 */       case AUTUMN: return "autumn";
 /*  99 */       case WINTER: return "winter";
 /* 100 */     }  return null;
 /*     */   }
